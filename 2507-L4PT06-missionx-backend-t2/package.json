@@ -1,0 +1,29 @@
+{
+  "name": "2507-l4pt06-missionx-backend-t2",
+  "version": "1.0.0",
+  "description": "Welcome to our Node.js backend project! This guide will help you set up the project and understand the folder structure.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mission-Ready/2507-L4PT06-missionx-backend-t2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Mission-Ready/2507-L4PT06-missionx-backend-t2/issues"
+  },
+  "homepage": "https://github.com/Mission-Ready/2507-L4PT06-missionx-backend-t2#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3"
+  }
+}
