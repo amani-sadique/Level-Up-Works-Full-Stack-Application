@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,900;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.projects-container {
+  font-family: "Nunito", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 60px;
+  position: relative;
+  top: 430px !important;
+  left: 700px;
+  color: #767676;
+  width: 60vw;
+  margin-bottom: 0px;
+}
+
+.project {
+  text-align: center;
+  width: 100%;
+}
+
+.projectImage {
+  width: 100%;
+}
+
+.name {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.level {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* For 1920x1080 screens since i have 2560x1440 and 1920x1080 */
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
+  .projects-container {
+    position: relative;
+    left: 520px;
+    top: 360px !important;
+  }
+}

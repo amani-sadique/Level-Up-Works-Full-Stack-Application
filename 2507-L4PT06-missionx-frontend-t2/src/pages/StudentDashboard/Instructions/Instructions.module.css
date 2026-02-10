@@ -1,0 +1,232 @@
+/* Instructions.module.css */
+
+/* ==================== CONTAINER ==================== */
+.instructionsContainer {
+  min-height: 100%;
+  background: linear-gradient(135deg, #B8E6F0 0%, #A0D9E8 100%);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.instructionsContent {
+  max-width: 1200px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+}
+
+/* ==================== INSTRUCTION SECTIONS ==================== */
+.instructionSection {
+  margin-bottom: 60px;
+}
+
+.instructionSection:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* ==================== HEADINGS ==================== */
+.instructionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #5A6C7D;
+  margin: 0 0 30px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ==================== TEXT ==================== */
+.instructionText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5A6C7D;
+  margin: 0 0 20px 0;
+  font-weight: 400;
+}
+
+.instructionText:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== LINKS ==================== */
+.instructionLink {
+  color: #EC4899;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.instructionLink:hover {
+  color: #DB2777;
+  text-decoration: underline;
+}
+
+/* ==================== IMAGE CONTAINER ==================== */
+.instructionImageContainer {
+  margin: 30px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f8f9fa;
+}
+
+.instructionImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Image Placeholder */
+.imagePlaceholder {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  padding: 40px;
+  text-align: center;
+}
+
+.placeholderContent {
+  color: #6b7280;
+}
+
+/* ==================== NAVIGATION BUTTONS ==================== */
+.instructionNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.btnPrev,
+.btnNext {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btnPrev {
+  background-color: #e5e7eb;
+  color: #6b7280;
+}
+
+.btnPrev:hover:not(:disabled) {
+  background-color: #d1d5db;
+  transform: translateX(-3px);
+}
+
+.btnPrev:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnNext {
+  background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.btnNext:hover {
+  background: linear-gradient(135deg, #0891B2 0%, #0e7490 100%);
+  transform: translateX(3px);
+  box-shadow: 0 6px 16px rgba(6, 182, 212, 0.4);
+}
+
+/* ==================== CALLOUT BOXES ==================== */
+.instructionCallout {
+  background-color: #FEF3C7;
+  border-left: 4px solid #F59E0B;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 4px;
+}
+
+.instructionCallout.info {
+  background-color: #DBEAFE;
+  border-left-color: #3B82F6;
+}
+
+.instructionCallout.success {
+  background-color: #D1FAE5;
+  border-left-color: #10B981;
+}
+
+.instructionCallout.warning {
+  background-color: #FEE2E2;
+  border-left-color: #EF4444;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1024px) {
+  .instructionsContent {
+    padding: 50px 40px;
+  }
+  
+  .instructionTitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .instructionsContainer {
+    padding: 20px 15px;
+  }
+  
+  .instructionsContent {
+    padding: 40px 30px;
+    border-radius: 8px;
+  }
+  
+  .instructionTitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .instructionText {
+    font-size: 15px;
+  }
+  
+  .instructionNavigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btnPrev,
+  .btnNext {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instructionsContent {
+    padding: 30px 20px;
+  }
+  
+  .instructionTitle {
+    font-size: 20px;
+  }
+  
+  .instructionText {
+    font-size: 14px;
+  }
+  
+  .instructionImageContainer {
+    margin: 20px -20px;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.sideWrap{
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-open,
+.nav-close{
+  height: 86vh;
+  background-color: #43C0F6;
+  white-space: nowrap; /* prevents my links from wrapping before closing*/
+  transition: all 0.3s ease;
+}
+
+.nav-open {
+  width: 260px;
+}
+
+.nav-close{
+    width: 75px;
+    overflow: hidden;
+} 
+
+/* sidebar links  */
+.menuList{
+  margin: 25px 0px 20px 0px;
+}
+.menuItem:hover {
+  background-color: #80d7ff;
+  width: 100%;
+}
+
+.menuItem >a {
+  padding: 0.9rem 1.5rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.navLinkActive {
+  background-color: #b2e4fa;
+  color: #707070 !important;
+}
+
+/* Link Icon width */
+.sidenav{
+  width: 30px;
+}
+
+/* sidebar toggle button */
+.arrow,
+.arrowflip{
+  position: fixed;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #b2e4fa;
+  border-radius: 8px;
+  top: 590px;
+}
+
+.arrow:hover,
+.arrowflip:hover{
+  cursor: pointer;
+}
+.arrow{
+    left: 230px;
+    z-index: 100;
+    padding: 15px 30px 15px 17px;
+}
+
+.arrowflip{
+    padding: 15px 20px;
+    left: 25px;
+    z-index: 100;
+    transform: scaleX(-1);
+}
+
+/* Teacher profile pic */
+.userImage{
+  width: 100px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* the width makes it shrink a little before it is hidden - smooth effect */
+.userImageHidden{
+  opacity: 0;
+  width: 80px; 
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.userImageContainer{
+  height: 100px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main content */
+.mainNormal,
+.mainShift {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+  background-color: #b2e4fa;
+  height: 86vh;
+}
+
+/* The footer links in the sidebar (Profile, Settings, Logout) */
+/* when the sidebar is open */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style-type: none;
+  margin-top: 150px;
+}
+
+.footerLink a {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  color: white;            
+  gap: 6px;    
+  font-size: 11px;  
+}
+
+.footerLink img{
+  width: 20px;
+  height: 20px;
+}
+
+/* when sidebar is closed */
+.footerClose{
+margin-top: 140px;
+}
+
+/* when the sidebar is closed the children are styled below */
+.footerClose .footerLink a{
+  color: #43C0F6;
+  text-decoration: none;
+}
+
+.footerClose .footerLink img{
+  width: 25px;
+  height: 25px;
+}
+

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lexend+Peta:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.blueNavbar{
+    background-color: #43C0F6;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 100px;
+    color: white;
+    font-family: "Open Sans";
+    font-weight: bold;
+    width: 100vw;
+    /* position: fixed;
+    z-index: 100; */
+}
+
+.navLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+     color: white;
+}
+
+.link{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.logoImg{
+    height: 50px;
+    margin-left: 70px;
+}
+
+.rightSide{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+}
+
+.rightIconSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 1px;
+    margin-bottom: -10px;
+    
+    
+} 
+.rightIconSide > p {
+    font-size: 12px;
+    width: auto;
+    padding-top:0;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.flags{
+    height: 12px;
+    margin-right: 5px;
+}
+
+.smallTeacherImg{
+    height: 25px;
+    margin-right: 7px;
+    margin-top:0;
+    
+} 
+
+.userLink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    /* padding-bottom: 8px; */
+}
+
+.userProfileLink{
+    text-decoration: none;
+}
+
+.user{
+    color: white;
+    width: auto;
+    font-size: 14px;
+    height: 12px;
+    padding-top: 15px;
+    display: flex;
+    align-items: flex-end;
+}
+

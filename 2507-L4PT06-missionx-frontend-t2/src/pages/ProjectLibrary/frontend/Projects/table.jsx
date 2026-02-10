@@ -1,0 +1,92 @@
+ /* const projects1 = [
+    {
+      name: "Project01",
+      image: "/images/projects/Project01.png",
+      title: "Introduction",
+      level: "BEGINNER | ANIMATION",
+    },
+    {
+      name: "Project02",
+      image: "/images/projects/Project02.png",
+      title: "My Birthday",
+      level: "BEGINNER | ANIMATION",
+    },
+    {
+      name: "Project03",
+      image: "/images/projects/Project03.png",
+      title: "10 Block Challenge",
+      level: "BEGINNER | ANIMATION",
+    },
+    {
+      name: "Project04",
+      image: "/images/projects/Project04.png",
+      title: "Build a band",
+      level: "BEGINNER | ANIMATION",
+    },
+    {
+      name: "Project05",
+      image: "/images/projects/Project05.png",
+      title: "The bear and the monkey",
+      level: "BEGINNER | GAME",
+    },
+    {
+      name: "Project06",
+      image: "/images/projects/Project06.png",
+      title: "Debugging",
+      level: "INTERMEDIATE | GAME",
+    },
+    {
+      name: "Project07",
+      image: "/images/projects/Project07.png",
+      title: "About me",
+      level: "INTERMEDIATE | GAME",
+    },
+    {
+      name: "Project08",
+      image: "/images/projects/Project08.png",
+      title: "I am here!",
+      level: "INTERMEDIATE | GAME",
+    },
+    {
+      name: "Project09",
+      image: "/images/projects/Project09.png",
+      title: "Funny faces",
+      level: "INTERMEDIATE | CHATBOT",
+    },
+    {
+      name: "Project10",
+      image: "/images/projects/Project10.png",
+      title: "It tickles!",
+      level: "INTERMEDIATE | CHATBOT",
+    },
+    {
+      name: "Project11",
+      image: "/images/projects/Project11.png",
+      title: "Penguin in a Desert",
+      level: "ADVANCED | CHATBOT",
+    },
+    {
+      name: "Project12",
+      image: "/images/projects/Project12.png",
+      title: "Time Travel",
+      level: "ADVANCED | AUGMENTED REALITY",
+    },
+    {
+      name: "Project13",
+      image: "/images/projects/Project13.png",
+      title: "Birthday Card",
+      level: "ADVANCED | AUGMENTED REALITY",
+    },
+    {
+      name: "Project14",
+      image: "/images/projects/Project14.png",
+      title: "The Lion and the Mouse Part 1",
+      level: "ADVANCED | AUGMENTED REALITY",
+    },
+    {
+      name: "Project15",
+      image: "/images/projects/Project15.png",
+      title: "The Lion and the Mouse Part 2",
+      level: "ADVANCED | AUGMENTED REALITY",
+    },
+  ]; */

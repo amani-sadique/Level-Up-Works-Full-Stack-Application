@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lexend+Peta:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lexend+Peta:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+     font-family: "Open Sans", sans-serif;
+}
+
+.levelBlueLogo{
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    padding: 0 40px;
+    width: 100vw;
+    height: 8vh;
+    z-index: 100;
+}
+
+.helpBtn{
+    background-color: rgb(185, 38, 129);
+    color: white;
+    margin: 10px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 10px;;
+}
+
+.moreProjectsBtn{
+    background-color: rgb(88, 183, 228);
+    color: white;
+    margin: 10px 20px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 10px;;
+}
+
+.flags{
+    position: relative;
+    top: -10px;
+    height: 12px;
+    margin-right: 10px;
+}
