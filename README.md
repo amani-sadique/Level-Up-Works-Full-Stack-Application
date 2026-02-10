@@ -1,1 +1,1 @@
-This was the final assignment for the full-stack paper I took at Mission Ready. I was responsible for building the homepage and a login/sign up pop-up modal, where I connected the front-end to the back-end via Postman and MySQL.
+This was the final group project for the full-stack development paper I took at Mission Ready. I was responsible for building the homepage and a login/sign up pop-up modal, where I connected the front-end to the back-end via Postman and MySQL.
