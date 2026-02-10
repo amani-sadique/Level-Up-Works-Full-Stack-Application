@@ -1,0 +1,272 @@
+/* ==================== VIDEO TUTORIAL CONTAINER ==================== */
+.videoTutorialsContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== VIDEO TUTORIALS CONTENT BOX ==================== */
+.videoTutorialsContent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 60px 50px;
+  max-width: 1000px;
+  width: 100%;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== VIDEO TUTORIAL TITLE ==================== */
+.videoTutorialTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ==================== VIDEO TUTORIAL TEXT ==================== */
+.videoTutorialText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4B5563;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.videoTutorialText strong {
+  color: #1F2937;
+  font-weight: 600;
+}
+
+.videoTutorialText em {
+  font-style: italic;
+  color: #6B7280;
+}
+
+/* ==================== VIDEO CONTAINER ==================== */
+.videoTutorialVideoContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 30px 0;
+  background: #000;
+}
+
+.videoTutorialVideoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==================== LINKS ==================== */
+.videoTutorialText a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.videoTutorialText a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* ==================== VIDEO TUTORIAL NAVIGATION ==================== */
+.videoTutorialNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.btnPrev,
+.btnNext {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnPrev {
+  background-color: #E5E7EB;
+  color: #1F2937;
+}
+
+.btnPrev:hover {
+  background-color: #D1D5DB;
+  transform: translateX(-5px);
+}
+
+.btnNext {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btnNext:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  transform: translateX(5px);
+}
+
+/* ==================== PLAYLIST/LIST (OPTIONAL) ==================== */
+.videoTutorialList {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.videoTutorialList li {
+  background-color: #F9FAFB;
+  border-left: 4px solid #667eea;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.videoTutorialList li:hover {
+  background-color: #F3F4F6;
+  transform: translateX(5px);
+}
+
+.videoTutorialList li strong {
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* ==================== CALLOUT BOXES (OPTIONAL) ==================== */
+.videoTutorialCallout {
+  background-color: #FEF3C7;
+  border-left: 4px solid #F59E0B;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 4px;
+}
+
+.videoTutorialCallout.info {
+  background-color: #DBEAFE;
+  border-left-color: #3B82F6;
+}
+
+.videoTutorialCallout.success {
+  background-color: #D1FAE5;
+  border-left-color: #10B981;
+}
+
+.videoTutorialCallout.warning {
+  background-color: #FEE2E2;
+  border-left-color: #EF4444;
+}
+
+.videoTutorialCallout p {
+  margin: 0;
+  color: #374151;
+  font-size: 15px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1024px) {
+  .videoTutorialsContent {
+    padding: 50px 40px;
+  }
+  
+  .videoTutorialTitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoTutorialsContainer {
+    padding: 20px 15px;
+  }
+  
+  .videoTutorialsContent {
+    padding: 40px 30px;
+    border-radius: 8px;
+  }
+  
+  .videoTutorialTitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .videoTutorialText {
+    font-size: 15px;
+  }
+  
+  .videoTutorialNavigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btnPrev,
+  .btnNext {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoTutorialsContent {
+    padding: 30px 20px;
+  }
+  
+  .videoTutorialTitle {
+    font-size: 20px;
+  }
+  
+  .videoTutorialText {
+    font-size: 14px;
+  }
+  
+  .videoTutorialVideoContainer {
+    margin: 20px -20px;
+    border-radius: 0;
+  }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+  .videoTutorialsContainer {
+    background: white;
+    padding: 0;
+  }
+  
+  .videoTutorialsContent {
+    box-shadow: none;
+    padding: 20px;
+  }
+  
+  .videoTutorialNavigation {
+    display: none;
+  }
+}

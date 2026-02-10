@@ -1,0 +1,313 @@
+/* ==================== SUBMIT PROJECT CONTAINER ==================== */
+.submitProjectContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #A0D9E8 100%);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== SUBMIT PROJECT CONTENT BOX ==================== */
+.submitProjectContent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 60px 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ==================== MAKE PROJECT TITLE ==================== */
+.makeProjectTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #5A6C7D;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ==================== MAKE PROJECT TEXT ==================== */
+.makeProjectText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4B5563;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.makeProjectText strong {
+  color: #1F2937;
+  font-weight: 600;
+}
+
+/* ==================== SCRATCH EDITOR CONTAINER ==================== */
+.makeProjectEditorContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* 4:3 aspect ratio for Scratch editor */
+  margin: 30px 0;
+  background: #f3f4f6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.makeProjectEditorContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ==================== TIPS SECTION ==================== */
+.makeProjectTips {
+  background: #F3F4F6;
+  border-left: 4px solid #667eea;
+  padding: 20px 25px;
+  margin: 30px 0;
+  border-radius: 8px;
+}
+
+.makeProjectTips h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 15px 0;
+}
+
+.makeProjectTips ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.makeProjectTips li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #4B5563;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.makeProjectTips li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.makeProjectTips li:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== NAVIGATION BUTTONS ==================== */
+.makeProjectNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.btnPrev,
+.btnNext {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btnPrev {
+  background: #E5E7EB;
+  color: #4B5563;
+}
+
+.btnPrev:hover {
+  background: #D1D5DB;
+  transform: translateX(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btnNext {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btnNext:hover {
+  transform: translateX(3px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btnPrev:active,
+.btnNext:active {
+  transform: scale(0.98);
+}
+
+/* ==================== LISTS ==================== */
+.makeProjectContent ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.makeProjectContent li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4B5563;
+  margin-bottom: 12px;
+}
+
+/* ==================== CALLOUT BOXES ==================== */
+.makeProjectCallout {
+  padding: 20px 25px;
+  margin: 25px 0;
+  border-radius: 8px;
+  border-left: 4px solid;
+  background-color: #F3F4F6;
+}
+
+.makeProjectCallout.info {
+  background-color: #DBEAFE;
+  border-left-color: #3B82F6;
+}
+
+.makeProjectCallout.success {
+  background-color: #D1FAE5;
+  border-left-color: #10B981;
+}
+
+.makeProjectCallout.warning {
+  background-color: #FEF3C7;
+  border-left-color: #F59E0B;
+}
+
+.makeProjectCallout.error {
+  background-color: #FEE2E2;
+  border-left-color: #EF4444;
+}
+
+.makeProjectCallout p {
+  margin: 0;
+  color: #374151;
+  font-size: 15px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1024px) {
+  .makeProjectContent {
+    padding: 50px 40px;
+  }
+  
+  .makeProjectTitle {
+    font-size: 24px;
+  }
+
+  .makeProjectEditorContainer {
+    padding-bottom: 80%; /* Adjust aspect ratio for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .makeProjectContainer {
+    padding: 20px 15px;
+  }
+  
+  .makeProjectContent {
+    padding: 40px 30px;
+    border-radius: 8px;
+  }
+  
+  .makeProjectTitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .makeProjectText {
+    font-size: 15px;
+  }
+  
+  .makeProjectNavigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btnPrev,
+  .btnNext {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .makeProjectEditorContainer {
+    padding-bottom: 100%; /* Square ratio for mobile */
+  }
+
+  .makeProjectTips {
+    padding: 15px 20px;
+  }
+
+  .makeProjectTips h3 {
+    font-size: 16px;
+  }
+
+  .makeProjectTips li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .makeProjectContent {
+    padding: 30px 20px;
+  }
+  
+  .makeProjectTitle {
+    font-size: 20px;
+  }
+  
+  .makeProjectText {
+    font-size: 14px;
+  }
+  
+  .makeProjectEditorContainer {
+    margin: 20px -20px;
+    border-radius: 0;
+    padding-bottom: 120%; /* Taller ratio for small mobile screens */
+  }
+
+  .makeProjectTips {
+    margin: 20px -20px;
+    border-radius: 0;
+  }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+  .makeProjectContainer {
+    background: white;
+    padding: 0;
+  }
+  
+  .makeProjectContent {
+    box-shadow: none;
+    padding: 20px;
+  }
+  
+  .makeProjectNavigation {
+    display: none;
+  }
+
+  .makeProjectEditorContainer {
+    display: none;
+  }
+}

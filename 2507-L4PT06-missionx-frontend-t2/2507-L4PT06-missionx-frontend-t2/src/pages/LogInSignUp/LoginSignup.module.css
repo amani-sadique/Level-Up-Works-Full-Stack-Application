@@ -1,0 +1,72 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.loginSignup {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.students img,
+.teachers img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.students,
+.teachers {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.logInStudents {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logInStudents input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.logInStudents button {
+  padding: 12px;
+  background: hotpink;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .students,
+  .teachers {
+    width: 100%;
+  }
+}

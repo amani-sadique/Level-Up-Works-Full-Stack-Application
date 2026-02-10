@@ -1,0 +1,15 @@
+.studentCard {
+  display: flex;
+  margin: 10px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+.blockDiv {
+  display: block;
+}
+.centred {
+  align-content: center;
+  width: 100%;
+  padding: 10px;
+}

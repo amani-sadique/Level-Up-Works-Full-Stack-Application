@@ -1,0 +1,56 @@
+ .footer {
+    width: 100%;
+    padding: 100px 300px;
+    background-color: #b2e4fa;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    position: relative;
+    top: 700px;
+    margin-top: auto;
+  }
+  
+  .footer > div {
+    color: #707070;
+    list-style-type: none;
+  }
+
+  .footer ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .li li {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #707070;
+  }
+
+  .footer-title {
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #707070;
+  }
+
+  .footer-title p {
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .footer > div:last-child {
+    max-width: 400px;
+  }
+
+  .footer > div:last-child h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }

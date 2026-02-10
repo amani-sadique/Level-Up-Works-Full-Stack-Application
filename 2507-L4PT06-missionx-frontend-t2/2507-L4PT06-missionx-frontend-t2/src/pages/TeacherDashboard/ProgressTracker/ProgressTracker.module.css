@@ -1,0 +1,5 @@
+.studentCard {
+
+  display: flex;
+  flex-direction: column;
+}
