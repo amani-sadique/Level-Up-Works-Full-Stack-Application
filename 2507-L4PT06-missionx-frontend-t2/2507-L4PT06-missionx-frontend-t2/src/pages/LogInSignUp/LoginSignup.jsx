@@ -8,7 +8,10 @@ import { useEffect, useState } from "react";
 export default function LoginSignup() {
   const [role, setRole] = useState("student");
   const [activeForm, setActiveForm] = useState("login");
+  const [status, setStatus] = useState("idle");
+// idle | loading | success | error
 
+const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -40,74 +43,184 @@ export default function LoginSignup() {
     }
   };
 
-  const signUpStudnet = ()=>{
 
-    fetch("http://localhost:4000/studentSignUp", {
-      method:"POST",
-      headers: {"Content-Type":"application/json"},
+
+// SIGN UP STUDENT
+ {
+
+  const signUpStudnet = async () => {
+  try {
+    setStatus("loading");
+
+    const res = await fetch("http://localhost:4000/studentSignUp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-      name:formData.fullName,
-      email:formData.email,
-      password:formData.password
-      })
-    }) 
-    .then((res)=>{ 
-      if ( res.status === 200) {
-        console.log("student signed up!")
-      } else{
-        console.log("failed to sign up student :(")
-      }
-      
-    })
+        name: formData.fullName,
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
+
+    if (res.status === 200) {
+      setStatus("success");
+      setMessage("Student account created successfully!");
+    } else {
+      setStatus("error");
+      setMessage("Failed to create student account.");
+    }
+  } catch (err) {
+    setStatus("error");
+    setMessage("Server error. Please try again.");
   }
-  const signUpTeacher = ()=>{
+};
 
-    fetch("http://localhost:4000/teacherSignUp", {
-      method:"POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({
-      name:formData.fullName,
-      email:formData.email,
-      password:formData.password
-      })
-    }) 
-    .then((res)=>{ 
-      if ( res.status === 200) {
-        console.log("teacher signed up!")
-      } else{
-        console.log("failed to sign up teacher :(")
-      }
-      
-    })
-  }
-// DO THIS FOR STUDENT LOGIN
-   const logInTeacher = ()=>{
 
-    fetch("http://localhost:4000/teacherLogIn", {
-      method:"POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({
-      email:formData.email,
-      password:formData.password
-      })
-    }) 
-    .then((res)=>{ 
-      if ( res.status === 200) {
-        console.log("teacher logged in!")
-      } else if (res.status===404){
-        console.log("no email found :(")
-      } else {
-        console.log("incorrect password")
-      }
-      
-    })
   }
 
+  // SIGN UP TEACHER
+ {
+
+  const signUpTeacher = async () => {
+  try {
+    setStatus("loading");
+
+    const res = await fetch("http://localhost:4000/teacherSignUp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formData.fullName,
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
+
+    if (res.status === 200) {
+      setStatus("success");
+      setMessage("Teacher account created successfully!");
+    } else {
+      setStatus("error");
+      setMessage("Failed to create teacher account.");
+    }
+  } catch (err) {
+    setStatus("error");
+    setMessage("Server error. Please try again.");
+  }
+};
+
+
+  }
+
+// LOGIN TEACHER
+ const logInTeacher = async () => {
+  try {
+    setStatus("loading");
+
+    const res = await fetch("http://localhost:4000/teacherLogIn", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
+
+    if (res.status === 200) {
+      setStatus("success");
+      setMessage("Teacher logged in successfully!");
+    } else if (res.status === 404) {
+      setStatus("error");
+      setMessage("No email found.");
+    } else {
+      setStatus("error");
+      setMessage("Incorrect password.");
+    }
+  } catch (err) {
+    setStatus("error");
+    setMessage("Server error.");
+  }
+};
+
+// LOGIN STUDENT
+const logInStudent = async () => {
+  try {
+    setStatus("loading");
+
+    const res = await fetch("http://localhost:4000/studentLogIn", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
+
+    if (res.status === 200) {
+      setStatus("success");
+      setMessage("Student logged in successfully!");
+    } else if (res.status === 404) {
+      setStatus("error");
+      setMessage("No email found.");
+    } else {
+      setStatus("error");
+      setMessage("Incorrect password.");
+    }
+  } catch (err) {
+    setStatus("error");
+    setMessage("Server error.");
+  }
+};
+
+//Success Screen //
+
+if (status === "success") {
+  return (
+    <div className={styles.successContainer}>
+      <div className={styles.successCard}>
+        <h1>✅ Success!</h1>
+        <p>{message}</p>
+
+        <button
+          onClick={() => {
+            setStatus("idle");
+
+            setFormData({
+              fullName: "",
+              email: "",
+              password: "",
+              confirmPassword: "",
+            });
+          }}
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// Error Screen //
+
+{status === "error" && (
+  <p className={styles.errorMessage}>{message}</p>
+)}
+
+// Loading Button State
+
+<button type="submit" disabled={status === "loading"}>
+  {status === "loading"
+    ? "PLEASE WAIT..."
+    : activeForm === "login"
+    ? "LOG IN"
+    : "SIGN UP"}
+</button>
+
+// main modal UI //
 
   return (
     <div className={styles.flexContainer}>
       
-      {/* LEFT – STUDENTS */}
+      {/* LEFT SIDE – STUDENTS MODAL */}
       <div
         className={styles.students}
         onClick={() => setRole("student")}

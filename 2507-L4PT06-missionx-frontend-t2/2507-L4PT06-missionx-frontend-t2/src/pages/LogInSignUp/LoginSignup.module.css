@@ -70,3 +70,43 @@
     width: 100%;
   }
 }
+
+.successContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.successCard {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+.successCard h1 {
+  color: hotpink;
+  margin-bottom: 15px;
+}
+
+.successCard p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.successCard button {
+  padding: 12px 20px;
+  background: hotpink;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+}
