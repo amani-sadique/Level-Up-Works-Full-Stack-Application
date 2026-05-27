@@ -80,7 +80,34 @@ export default function LoginSignup() {
       
     })
   }
-// DO THIS FOR STUDENT LOGIN
+
+// Student Log-In
+  const logInStudent = async () => {
+  try {
+    const res = await fetch("http://localhost:4000/studentLogIn", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
+
+    if (res.status === 200) {
+      setStatus("success");
+      setMessage("Student logged in!");
+    } else {
+      setStatus("error");
+      setMessage("Invalid login.");
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Teacher Log-In
    const logInTeacher = ()=>{
 
     fetch("http://localhost:4000/teacherLogIn", {
