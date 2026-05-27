@@ -150,7 +150,7 @@ app.post("/studentLogIn", (req, res) => {
     }
   );
 });
-// TEACHER LOG IN -- COPY WHAT I DID WITH JORDAN :)
+// TEACHER LOG IN
 app.post("/teacherLogIn", (req, res) => {
   console.log("teacher login endpoint hit")
   const email = req.body.email

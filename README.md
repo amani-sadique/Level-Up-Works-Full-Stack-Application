@@ -1,1 +1,1 @@
-This was the final group project for the full-stack development paper I took at Mission Ready. I was responsible for building the homepage and a login/sign up modal, where I connected the front-end to the back-end using Postman and MySQL.
+Level Up Works is a full-stack development project completed in collaboration with four other developers, focused on building a functioning educational platform. My role involved developing the homepage and login/sign-up modal, connecting user input from the front-end to the back-end via a MySQL database, and testing APIs with Postman.
